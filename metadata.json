@@ -1,0 +1,6 @@
+{
+  "name": "How Rare Are You? — Statistical Rarity Estimator",
+  "description": "There are billions of people on Earth. How many of them are actually like you? Take the interactive rarity test and discover your estimated statistical rarity.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+:root {
+  --background: #1A1B23;
+  --background-alt: #16171E;
+  --surface: #232530;
+  --surface-elevated: #2C2F3E;
+  --surface-inset: #1E202A;
+  --border: rgba(255, 255, 255, 0.14);
+  --border-subtle: rgba(255, 255, 255, 0.09);
+  --text-primary: #F8FAFC;
+  --text-secondary: #B8BCC8;
+  --text-muted: #888D9E;
+  --accent: #8B5CF6;
+  --accent-bright: #A78BFA;
+  --accent-glow: rgba(139, 92, 246, 0.22);
+}
+
+@layer base {
+  html {
+    background-color: var(--background);
+    color: var(--text-primary);
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    scroll-behavior: smooth;
+    color-scheme: dark;
+  }
+
+  body {
+    background-color: var(--background);
+    background-image: radial-gradient(
+      ellipse 85% 60% at 50% -10%,
+      rgba(139, 92, 246, 0.12),
+      transparent 70%
+    );
+    color: var(--text-primary);
+    overflow-x: hidden;
+    min-height: 100dvh;
+    letter-spacing: 0.01em;
+  }
+
+  h1, h2, .font-display {
+    font-family: 'Syne', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    text-wrap: balance;
+  }
+
+  .font-mono-tabular {
+    font-family: 'JetBrains Mono', monospace;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Subtle texture overlay for warm atmospheric depth */
+.bg-noise {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 0);
+  background-size: 26px 26px;
+}
+
+/* Accessibility: Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
